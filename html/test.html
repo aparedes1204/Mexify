@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AmplitudeJS Testing</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.3.2/dist/amplitude.js"></script>
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/test.css" />
+  </head>
+  <body>
+    <div id="flat-black-player-container">
+      <div id="player-screen">
+        <div id="player-top">
+          <img data-amplitude-song-info="cover_art_url"/>
+        </div>
+        <div id="player-progress-bar-container">
+          <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+          <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+        </div>
+        <div id="player-middle">
+          <div id="time-container">
+            <span class="amplitude-current-time time-container"></span>
+            <span class="amplitude-duration-time time-container"></span>
+          </div>
+          <div id="meta-container">
+            <span data-amplitude-song-info="name" class="song-name"></span>
+
+            <div class="song-artist-album">
+              <span data-amplitude-song-info="artist"></span>
+            </div>
+          </div>
+        </div>
+        <div id="player-bottom">
+          <div id="control-container">
+
+            <div id="play-pause-container">
+              <div class="amplitude-play-pause" id="play-pause"></div>
+            </div>
+
+            <div id="repeat-container">
+              <div class="amplitude-repeat" id="repeat"></div>
+            </div>
+
+          </div>
+
+          <div id="volume-container">
+            <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/volume.svg"/><input type="range" class="amplitude-volume-slider" step=".1"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      Amplitude.init({
+        "songs": [
+          {
+            "name": "Prophets",
+            "artist": "A.C. Newman",
+            "url": "./music/A.C. Newman - Prophets.mp3",
+            "cover_art_url": "cover/patata1.jpg"
+          },
+          {
+            "name": "Handbags and Gladrag",
+            "artist": "Big George",
+            "url": "./music/Big George - Handbags and Gladrag.mp3",
+            "cover_art_url": "cover/patata2.jpg"
+          },
+          {
+            "name": "What You Know but It's September",
+            "artist": "Two Door Cinema Club feat. Earth, Wind & Fire",
+            "url": "./music/Two Door Cinema Club feat. Earth, Wind & Fire - What You Know but It's September.mp3",
+            "cover_art_url": "cover/patata3.jpg"
+          }
+        ]
+      });
+    
+      document.getElementById('song-played-progress').addEventListener('click', function (e) {
+        var offset = this.getBoundingClientRect();
+        var x = e.pageX - offset.left;
+    
+        Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat(this.offsetWidth)) * 100);
+      });
+    
+    </script>
+  </body>
+</html>

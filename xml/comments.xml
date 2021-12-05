@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <DOCTYPE songs SYSTEM "comments.dtd"> -->
+<songs>
+    <song id="1">
+        <comments>
+            <comment>
+                <author>epepe</author>
+                <date>2021-11-15T16:13:59+01:00</date>
+                <review>mal</review>
+            </comment>
+        </comments>
+    </song>
+    <song id="2">
+        <comments>
+            <comment>
+                <author>jose</author>
+                <date>2021-11-20T16:13:59+01:00</date>
+                <review>bien</review>
+            </comment>
+        </comments>
+    </song>
+</songs>

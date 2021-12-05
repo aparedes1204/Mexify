@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <DOCTYPE songs SYSTEM "songs.dtd"> -->
+<songs amount="0">
+    <song id="1">
+        <cover>../cover/patata1.jpg</cover>
+        <file></file>
+        <artist></artist>
+        <album></album>
+        <description>patata1</description>
+    </song>
+    <song id="2">
+        <cover></cover>
+        <file></file>
+        <artist></artist>
+        <album></album>
+        <description></description>
+    </song>
+</songs>
