@@ -1,14 +1,15 @@
 $(document).on("click", "#showComments",function() {        
     
-    var form = new FormData(document.forms["galderenF"])
-    var data = {}
-    data['id'] = $(this).attr('name')
+    var postdata = {}
+    postdata['id'] = $(this).attr('name')
 
     $.ajax({
         url: '../php/SongComments.php',
-        data: data,
+        data: postdata,
         type: 'POST',
         success: function(data) {
+            var id = postdata['id']
+            history.pushState({}, "", window.location.href + "?id="+id);
             $("#content").html(data)
         }, 
         error: function(data){
@@ -16,5 +17,4 @@ $(document).on("click", "#showComments",function() {
         },
         cache: false
     });
-    //window.history.pushState({"pageTitle":"patata"},"", `${window.location.href}?id=${data['id']}`);
 })

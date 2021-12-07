@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <DOCTYPE songs SYSTEM "users.dtd"> -->
+<users>
+    <user>
+        <email></email>
+        <password></password>
+    </user>
+    <user>
+        <email></email>
+        <password></password>
+    </user>
+    <user>
+        <email></email>
+        <password></password>
+    </user>
+</users>

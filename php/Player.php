@@ -19,14 +19,14 @@
         -->
 
   <!-- Include Style Sheet -->
-  <link rel="stylesheet" type="text/css" href="css/app.css" />
+  <link rel="stylesheet" type="text/css" href="../css/app.css" />
 </head>
 
-<body>
+<footer>
 
   <div id="single-song-player" class="footer">
     <div class="left-container">
-      <img data-amplitude-song-info="cover_art_url" class="album-art" height="200px" />
+      <img data-amplitude-song-info="cover_art_url" class="album-art"/>
       <div class="meta-container">
         <span data-amplitude-song-info="name" class="song-name"></span>
         <div class="song-artist-album">
@@ -66,31 +66,10 @@
       
 
   </div>
-</body>
+</footer>
 
 <script>
-  Amplitude.init({
-    "songs": [
-      {
-        "name": "Prophets",
-        "artist": "A.C. Newman",
-        "url": "./music/A.C. Newman - Prophets.mp3",
-        "cover_art_url": "cover/patata1.jpg"
-      },
-      {
-        "name": "Handbags and Gladrag",
-        "artist": "Big George",
-        "url": "./music/Big George - Handbags and Gladrag.mp3",
-        "cover_art_url": "cover/patata2.jpg"
-      },
-      {
-        "name": "What You Know but It's September",
-        "artist": "Two Door Cinema Club feat. Earth, Wind & Fire",
-        "url": "./music/Two Door Cinema Club feat. Earth, Wind & Fire - What You Know but It's September.mp3",
-        "cover_art_url": "cover/patata3.jpg"
-      }
-    ]
-  });
+  Amplitude.init({});
 
   document.getElementById('song-played-progress').addEventListener('click', function (e) {
     var offset = this.getBoundingClientRect();

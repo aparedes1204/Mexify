@@ -10,3 +10,31 @@
 	background-color: #008CBA;
   	color: white;
 }
+#image{
+	width:  100px;
+    height: 100px;
+	object-fit: cover;
+	opacity: 1;
+  	transition: .25s ease;
+  	backface-visibility: hidden;
+}
+.play {
+	transform: translate(50%, -150%);
+	-ms-transform: translate(50%, -150%);
+	width:  50px;
+    height: 50px;
+	object-fit: cover;
+	transition: .25s ease;
+	opacity: 0;
+}
+#playcontainer:hover #image {
+	opacity: 0.3;	
+}
+
+#playcontainer:hover .play {
+	opacity: 1;
+}
+
+#content{
+	margin-bottom: 100px;
+}

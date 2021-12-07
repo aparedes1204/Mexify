@@ -3,12 +3,42 @@
 <head>
     <script src='../js/jquery-3.4.1.min.js'></script>
     <script type='text/javascript' src='../js/ShowComments.js'></script>
+    <script type='text/javascript' src='../js/PlaySong.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/estiloa.css">
 </head>
 <body>
-    <div id="content">
-    <button type="button" id="showComments" class="botoiUrdin" name="1">comments of 1</button>
-    <button type="button" id="showComments" class="botoiUrdin" name="2">comments of 2</button>
+    <div id="content" style='width: 55%; margin: 0 auto;'>
+    <?php
+        $songxml = simplexml_load_file('../xml/songs.xml');
+        foreach($songxml->xpath('//song') as $song){
+            echo "
+            <div id='".$song['id']."'>
+                <div class='card'>
+                    <div class='row no-gutters'>
+                        <div class='col-auto' id='playcontainer' onclick='playSong(".$song['id'].")' style='width: 100px; height: 100px;'>
+                            <img class='card-img' id='image' src='".$song->cover."' alt='Suresh Dasari Card'>
+                            <img class='play' src='../images/play.png'>
+                        </div>
+                        <div class='col-sm-5'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>".$song->title."</h5>
+                                <p class='card-text'>".$song->artist."</p>
+                            </div>
+                        </div>    
+                        <div class='col align-self-center d-flex justify-content-center'>
+                            <button type='button' id='showComments' class='botoiUrdin' name='".$song['id']."'>Informazio gehiago ikusi</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            ";
+        }
+    ?> 
     </div>
 </body>
+<?php
+        include "Player.php";
+    ?>
 </html>

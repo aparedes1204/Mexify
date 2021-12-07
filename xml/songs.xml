@@ -3,16 +3,26 @@
 <songs amount="0">
     <song id="1">
         <cover>../cover/patata1.jpg</cover>
-        <file></file>
-        <artist></artist>
-        <album></album>
+        <file>../music/A.C. Newman - Prophets.mp3</file>
+        <title>Prophets</title>
+        <artist>A.C. Newman</artist>
+        <album>Get Guilty</album>
         <description>patata1</description>
     </song>
     <song id="2">
-        <cover></cover>
-        <file></file>
-        <artist></artist>
+        <cover>../cover/patata2.jpg</cover>
+        <file>../music/Big George - Handbags and Gladrag.mp3</file>
+        <title>Handbags and Gladrag</title>
+        <artist>Big George</artist>
+        <album>The Office OTS</album>
+        <description>patata2</description>
+    </song>
+    <song id="3">
+        <cover>../cover/patata3.jpg</cover>
+        <file>../music/Two Door Cinema Club feat. Earth, Wind and Fire - What You Know but It's September.mp3</file>
+        <title>What You Know but It's September</title>
+        <artist>Two Door Cinema Club feat. Earth, Wind and Fire</artist>
         <album></album>
-        <description></description>
+        <description>patata3</description>
     </song>
 </songs>

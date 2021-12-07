@@ -35,7 +35,9 @@ div.left-container {
 }
     .album-art{
         float:left;
-        height: 100px;
+        width:  120px;
+        height: 120px;
+        object-fit: cover;
     }
     .meta-container{
         float:left;
