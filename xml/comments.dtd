@@ -1,0 +1,8 @@
+<!ELEMENT songs (song)*>
+<!ELEMENT song (comments)>
+<!ATTLIST song id ID #REQUIRED>
+<!ELEMENT comments (comment)*>
+<!ELEMENT comment (author, date, review)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT review (#PCDATA)>
