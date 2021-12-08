@@ -1,12 +1,5 @@
-.footer {
-    height: auto;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin :auto;
-    color: azure;
-    background: rgb(48, 46, 46);
+.fixed-bottom {
+ background-color: rgba(248,249,250,255);
 } 
 
 div.amplitude-play-pause {
@@ -34,6 +27,7 @@ div.left-container {
     text-align: left;
 }
     .album-art{
+        border-radius: 5px;
         float:left;
         width:  120px;
         height: 120px;

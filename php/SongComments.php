@@ -13,7 +13,6 @@
                 break;
             }
         }
-
         $songxml = simplexml_load_file('../xml/songs.xml');
         foreach($songxml->xpath('//song') as $song){
             if ($song['id'] == $id) {
@@ -21,23 +20,54 @@
                 break;
             }
         }
-        echo "
-            <head>
-                <script src='../js/jquery-3.4.1.min.js'></script>
-                <script type='text/javascript' src='../js/AddReview.js'></script>
-                <script type='text/javascript' src='../js/GoBack.js'></script>
-            </head>
-            <body>
-            <div id='songinfo'>
-                <img src= '".$songinfo->cover."'>
-                <p id='description'>".$songinfo->description."</p>
-            </div>";
 
+        $curl = curl_init();
+        $artisturl=str_replace(" ", "%20", $songinfo->restartist);
+        $songurl=str_replace(" ", "%20", $songinfo->resttitle);
+        $url = "https://api.lyrics.ovh/v1/$artisturl/$songurl";
+
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($curl, CURLOPT_HEADER, FALSE);
+        $response = curl_exec($curl);
+        $lyricsarray = json_decode($response);
+        $lyrics=str_replace("\n", "<br>", $lyricsarray->lyrics);
+        // echo "
+        //     <div id='moreinfo'>
+        //         <div id='songinfo'>
+        //             <img src= '".$songinfo->cover."'>
+        //             <p id='title'>".$songinfo->title."</p>
+        //             <p id='artist'>".$songinfo->artist."</p>
+        //             <p id='album'>".$songinfo->album."</p>
+        //             <p id='lyrics'>".$lyrics."</p>
+        //         </div>";
+                echo "
+
+                    <div class= 'container-fluid' style='background-image: linear-gradient(#008CBA, #02a9e0); '>
+                        <div class='row'>
+                            <div class='col-md-4 col-lg-4 text-center'><img src='".$songinfo->cover."' id='abesti_irudia' class='img-fluid' style='width: 70%' alt='Diskoaren azala' title=' Diskoaren azala ' border='0' /></div>
+                            <div class='col-md-8 col-lg-8'>
+                                <h2 class='kategoria'>".$songinfo->title."</h2><h2 id='titulua'></h2>
+                                <br/>
+                                <h3 class='kategoria'>".$songinfo->artist."</h4><h4  id='artista'></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <h4 class='mt-3'>Letra</h4>
+                            <p id='lyrics'>".$lyrics."</p>
+                        </div>
+                        <div class='col mt-3'>
+
+                    
+            ";
             if(isset($_SESSION['email'])){
                 echo "
                     <form id='reviewForm'>
-                        <textarea name='review' id='review' cols='30' rows='10'></textarea>
-                        <input type='button' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'>
+                        <h4>Iruzkin berria gehitu</h4>
+                        <textarea name='review' id='review' cols='100' rows='10'></textarea>
+                        <p><input type='button' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'></p>
                     </form>
                 ";
             }
@@ -46,18 +76,23 @@
                 <p> Ez dago iruzkinik abesti honetarako</p>
             </div>";
         } else {
-            echo "<div id='songcomments'>";
+            echo "<div class='col mt-3'>
+                    <h4>Iruzkinak</h4>";
                 foreach($comments->children() as $comment){
                     $date = explode("T",$comment->date)[0];
                     $author = $comment->author;
                     $review = $comment->review;
-                    echo '<h3>'.$author.'</h3>';
-                    echo '<h5>'.$date.'</h5>';
+                    echo '<h5>'.$author.'</h5>';
+                    echo '<h6>'.$date.'</h6>';
                     echo '<p>'.$review.'</p>';
+                    echo "<hr/>";
                 }
         }
-        echo"</div>
-        </body";
+        echo"
+        </div>
+                </div>
+            </div>
+        </div>";
 
         
         

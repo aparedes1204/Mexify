@@ -9,7 +9,7 @@ $(document).on("click", "#showComments",function() {
         type: 'POST',
         success: function(data) {
             var id = postdata['id']
-            history.pushState({}, "", window.location.href + "?id="+id);
+            history.pushState({}, "", window.location.href);
             $("#content").html(data)
         }, 
         error: function(data){
