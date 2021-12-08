@@ -1,0 +1,10 @@
+<!ELEMENT songs (song)*>
+<!ATTLIST songs amount (#PCDATA)>
+<!ELEMENT song (cover, file, title, artist, album, description)>
+<!ATTLIST song id ID #REQUIRED>
+<!ELEMENT cover (#PCDATA)>
+<!ELEMENT file (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
