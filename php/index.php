@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../css/estiloa.css">
 
     <title>Welcome to Mexify</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
 </head>
 <body class='bg-dark'>
     <?php
