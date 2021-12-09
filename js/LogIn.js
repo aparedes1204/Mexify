@@ -1,3 +1,6 @@
+/*
+Kautotzeko Ajax erabiltzen duen script-a. Zuzen kautotuz gero alert-a erakutsi ostean hasierako orrira bidaltzen zaitu.
+*/
 $(document).on("click", "#submit",function() {        
 
     var data = {}

@@ -1,5 +1,7 @@
-
 <?php
+/*
+Aukeratutako kantaren informazioa eta iruzkinak bueltatzen ditu, bai eta iruzkin berri bat gehitzeko galdetegia, kautotuta egonez gero
+*/
     if($_SERVER['REQUEST_METHOD']=="POST"){
         if (!isset($_SESSION)){
             session_start();
@@ -31,7 +33,7 @@
         curl_setopt($curl, CURLOPT_HEADER, FALSE);
         $response = curl_exec($curl);
         $lyricsarray = json_decode($response);
-        if($lyricsarray->error){
+        if(isset($lyricsarray->error)){
             $lyrics = "Ez dago letrarik";
         } else {
             $lyrics=preg_replace("/\n\n+/i", "\n\n", $lyricsarray->lyrics);

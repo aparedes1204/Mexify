@@ -1,3 +1,6 @@
+/*
+Hautatutako kantaren xml-an dagokion informazioa Ajax bidez lortzeko, informazio honekin kanta objektu bat sortzen duen eta erreproduktoreari objektua pasatzen dion funtzioa
+*/
 function playSong(id){
     var songobj = {}
     $.ajax({

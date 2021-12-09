@@ -1,3 +1,6 @@
+/*
+Sesioa ixteko Ajax script-a
+*/
 $(document).ready(function(){
 
     $("#logout").click(function(){

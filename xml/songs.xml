@@ -2,7 +2,7 @@
 <!DOCTYPE songs SYSTEM "songs.dtd">
 <songs amount="0">
     <song id="1">
-        <cover>../cover/patata1.jpg</cover>
+        <cover>../cover/prophets.jpg</cover>
         <file>../music/A.C. Newman - Prophets.mp3</file>
         <title>Prophets</title>
         <resttitle>Prophets</resttitle>
@@ -12,7 +12,7 @@
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
     </song>
     <song id="2">
-        <cover>../cover/patata2.jpg</cover>
+        <cover>../cover/handbagsandgladrags.jpg</cover>
         <file>../music/Big George - Handbags and Gladrag.mp3</file>
         <title>Handbags and Gladrags</title>
         <resttitle>Handbags and Gladrags</resttitle>
@@ -22,7 +22,7 @@
         <description>pLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
     </song>
     <song id="3">
-        <cover>../cover/patata3.jpg</cover>
+        <cover>../cover/whatyouknowbutitsseptember.jpg</cover>
         <file>../music/Two Door Cinema Club feat. Earth, Wind and Fire - What You Know but It's September.mp3</file>
         <title>What You Know but It's September</title>
         <resttitle>September</resttitle>

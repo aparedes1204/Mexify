@@ -1,4 +1,7 @@
 <?php
+    /*
+    Post bidez jasotako iruzkina, kantaren id-a, eta sesioko eposta hartuz iruzkinen xml-an childNode berri bat sortzen du.
+    */
     if(isset($_POST['review'])){
         $review = $_POST['review'];
         $id = $_POST['id'];

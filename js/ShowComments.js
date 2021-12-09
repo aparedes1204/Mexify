@@ -1,3 +1,6 @@
+/*
+Kanta baten iruzkinak erakusteko Ajax eskaera egiten duen script-a
+*/
 $(document).on("click", "#showComments",function() {        
     
     var postdata = {}

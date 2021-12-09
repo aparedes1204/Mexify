@@ -1,4 +1,8 @@
 <?php
+    /*
+    Erregistratzerakoan egin behar diren balidazioak egiten dituen fitxategia: epostak EHU-koa izan behar du (xxxxx123@ikasle.ehu.eus/es edo xxxxx123@ehu.eus/es),
+    pasahitzak 8-ko luzera izan behar du gutxienez, eta ezin ditu hutsuneak izan. Gainera eposta dagoeneko existitzen den konprobatzen da
+    */
     if($_SERVER['REQUEST_METHOD']=="POST") {
         
         $name = trim($_POST['name']);

@@ -1,5 +1,7 @@
-
 <?php
+    /*
+    Kautotzerakoan egin behar diren konprobaketak egiten dituen fitxategia eta erabiltzailea eta pasahitza zuzenak badira saioa (session) hasten duen fitxategia
+    */
     if($_SERVER['REQUEST_METHOD']=="POST") {
         
         $email = trim($_POST['email']);

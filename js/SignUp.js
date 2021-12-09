@@ -1,3 +1,6 @@
+/*
+Erabiltzailea erregistratzeko Ajax eskaera egiten duen script-a
+*/
 $(document).on("click", "#submit",function() {        
 
     var data = {}

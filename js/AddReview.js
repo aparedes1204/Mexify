@@ -1,3 +1,6 @@
+/*
+Ajax teknika erabilita iruzkina gehitu eta momentuan, orria birkargatu gabe erakusten duen funtzioa
+*/
 function sendReview(id){
     if ($("#review").val().trim() == ""){
         alert("Sartu iruzkin bat.")
