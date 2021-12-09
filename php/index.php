@@ -18,21 +18,21 @@
 
     <title>Welcome to Mexify</title>
 </head>
-<body>
+<body class='bg-dark'>
     <?php
         include "Navbar.php";
     ?>
-    <div id="content" style='width: 70%; margin: 0 auto; margin-bottom: 200px; margin-top: 70px;'>
+    <div id="content" style='width: 65%; margin: 0 auto; margin-bottom: 200px; margin-top: 100px;'>
         <div id="songs">
             <?php
                 if(isset($_SESSION['email'])){
-                    echo "<h2>Kaixo, ".$_SESSION['email']."</h2>";
+                    echo "<h1 class= 'text-white mt-4 mb-4'align ='center'>Kaixo, ".$_SESSION['email']."</h1>";
                 }
                 $songxml = simplexml_load_file('../xml/songs.xml');
                 foreach($songxml->xpath('//song') as $song){
                     echo "
                     <div id='".$song['id']."'>
-                        <div class='card shadow-sm p-4 mb-4 bg-white'>
+                        <div class='card shadow-sm p-4 mb-2 bg-white'>
                             <div class='row no-gutters'>
                                 <div class='col-auto' id='playcontainer' onclick='playSong(".$song['id'].")' style='width: 100px; height: 100px;'>
                                     <img class='card-img' id='image' src='".$song->cover."' alt='Suresh Dasari Card'>

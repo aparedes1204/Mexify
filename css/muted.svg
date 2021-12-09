@@ -1,0 +1,12 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1" data-name="Layer 2">
+   <g id="svg_2" data-name="volume-mute">
+    <rect x="-3.03371" y="0" id="svg_3" opacity="0" height="24" width="24"/>
+    <path id="svg_4" d="m13.96629,21a1.06,1.06 0 0 1 -0.57,-0.17l-6.43,-4.4l-5,0a1,1 0 0 1 -1,-1l0,-6.86a1,1 0 0 1 1,-1l5,0l6.41,-4.4a1,1 0 0 1 1.59,0.83l0,16a1,1 0 0 1 -1,1z"/>
+   </g>
+  </g>
+ </g>
+</svg>

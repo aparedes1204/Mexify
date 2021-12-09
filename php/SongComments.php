@@ -31,18 +31,9 @@
         curl_setopt($curl, CURLOPT_HEADER, FALSE);
         $response = curl_exec($curl);
         $lyricsarray = json_decode($response);
-        $lyrics=str_replace("\n", "<br>", $lyricsarray->lyrics);
-        // echo "
-        //     <div id='moreinfo'>
-        //         <div id='songinfo'>
-        //             <img src= '".$songinfo->cover."'>
-        //             <p id='title'>".$songinfo->title."</p>
-        //             <p id='artist'>".$songinfo->artist."</p>
-        //             <p id='album'>".$songinfo->album."</p>
-        //             <p id='lyrics'>".$lyrics."</p>
-        //         </div>";
+        $lyrics=preg_replace("/\n\n+/i", "\n\n", $lyricsarray->lyrics);
+        $lyrics=str_replace("\n", "<br>", $lyrics);
                 echo "
-
                     <div class= 'container-fluid' style='background-image: linear-gradient(#008CBA, #02a9e0); '>
                         <div class='row'>
                             <div class='col-md-4 col-lg-4 text-center'><img src='".$songinfo->cover."' id='abesti_irudia' class='img-fluid' style='width: 70%' alt='Diskoaren azala' title=' Diskoaren azala ' border='0' /></div>
@@ -53,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class='row'>
+                    <div class='row text-white'>
                         <div class='col'>
                             <h4 class='mt-3'>Letra</h4>
                             <p id='lyrics'>".$lyrics."</p>
@@ -66,7 +57,7 @@
                 echo "
                     <form id='reviewForm'>
                         <h4>Iruzkin berria gehitu</h4>
-                        <textarea name='review' id='review' cols='100' rows='10'></textarea>
+                        <textarea name='review' id='review' cols='150' rows='7'></textarea>
                         <p><input type='button' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'></p>
                     </form>
                 ";
@@ -85,7 +76,7 @@
                     echo '<h5>'.$author.'</h5>';
                     echo '<h6>'.$date.'</h6>';
                     echo '<p>'.$review.'</p>';
-                    echo "<hr/>";
+                    echo "<hr class='bg-white'/>";
                 }
         }
         echo"
