@@ -9,22 +9,12 @@
 
     <link rel="stylesheet" type="text/css" href="../css/estiloa.css">
 </head>
-    <!-- <div id = "log-in" name = "log-in">
-        <h1>Erregistratzea</h1>
-
-        <form id = "sign-up-form" name = "sign-up-form" method = "post">
-            <p>Eposta:<input type="text" id="email" name="email"><p>
-            <p>Pasahitza:<input type="password" id="password" name="password"><p> 
-            <p id='signupalert'></p>
-            <input type="button" id="submit" name="submit" value="Sign Up">
-        </form>
-    </div> -->
 <body class='bg-dark align-middle'>
     <?php
         include 'Navbar.php';
     ?>
     <script>
-        $("#home").attr('href', 'index.php')
+        $("#homelink").attr("onclick", "window.location='index.php'")
     </script>
     <div id="signup">
         <div class="container">
@@ -47,7 +37,7 @@
                             </div>
                             <div class="row h-100">
                                 <div class="col-auto">
-                                    <input type="button" id="submit" name="submit" class="botoiUrdin" value="Sign Up">
+                                    <input type="button" id="submit" name="submit" class="botoiZuria" value="Sign Up">
                                 </div>
                                 <div class="col align-self-center">
                                     <p class="p-1" id="signupalert"></p>

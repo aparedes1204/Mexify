@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <DOCTYPE songs SYSTEM "users.dtd"> -->
+<!DOCTYPE songs SYSTEM "users.dtd">
 <users>
-    <user>
-        <email>proba001@ikasle.ehu.eus</email>
-        <password>1234</password>
-    </user>
-<user><email>proba002@ikasle.ehu.eus</email><password>1234</password></user></users>
+<user><name>Pepe pope</name><email>proba001@ikasle.ehu.eus</email><password>12345678</password></user></users>

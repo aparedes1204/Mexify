@@ -45,7 +45,7 @@
                                     </div>
                                 </div>    
                                 <div class='col align-self-center d-flex justify-content-center'>
-                                    <button type='button' id='showComments' class='botoiUrdin' name='".$song['id']."'>Informazio gehiago ikusi</button>
+                                    <button type='button' id='showComments' class='botoiZuria' name='".$song['id']."'>Informazio gehiago ikusi</button>
                                 </div>  
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 <?php
     if($_SERVER['REQUEST_METHOD']=="POST") {
         
+        $name = trim($_POST['name']);
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);
         
@@ -17,6 +18,14 @@
           die;
         }
 
+        if (!filter_var($password,
+        FILTER_VALIDATE_REGEXP, 
+        array('options' => array('regexp' => '/^(\S){8,}$/')) )
+        ) {
+          echo('Pasahitzak gutxienez 8 karakterekoa izan behar ditu, hutsunerik gabe');
+          die;
+        }
+
         $usersxml = simplexml_load_file('../xml/users.xml');
         $aurkituta = false;
         foreach($usersxml->xpath('//user') as $user){
@@ -30,6 +39,7 @@
             echo "Erabiltzaile dagoeneko erregistratuta dago";
         } else {
             $newuser = $usersxml->addChild('user');
+            $newuser -> addChild('name', $name);
             $newuser -> addChild('email', $email);
             $newuser -> addChild('password', $password);
             $usersxml -> asXML('../xml/users.xml');

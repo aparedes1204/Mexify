@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <DOCTYPE songs SYSTEM "songs.dtd"> -->
+<!DOCTYPE songs SYSTEM "songs.dtd">
 <songs amount="0">
     <song id="1">
         <cover>../cover/patata1.jpg</cover>
@@ -9,7 +9,7 @@
         <artist>AC Newman</artist>
         <restartist>AC Newman</restartist>
         <album>Get Guilty</album>
-        <description>patata1</description>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
     </song>
     <song id="2">
         <cover>../cover/patata2.jpg</cover>
@@ -19,7 +19,7 @@
         <artist>Big George</artist>
         <restartist>Rod Stewart</restartist>
         <album>The Office OTS</album>
-        <description>patata2</description>
+        <description>pLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
     </song>
     <song id="3">
         <cover>../cover/patata3.jpg</cover>
@@ -29,6 +29,6 @@
         <artist>Two Door Cinema Club feat. Earth, Wind and Fire</artist>
         <restartist>Earth, Wind and Fire</restartist>
         <album></album>
-        <description>patata3</description>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
     </song>
 </songs>

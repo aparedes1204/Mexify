@@ -40,7 +40,7 @@ ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="a
 				<br/>
 				<h3 class="kategoria">Albuma: </h3><h3 id="albuma"></h3>
 				<br/>
-				<button id="buttonIruzkinak" class="botoiUrdin">Iruzkinak ikusi</button>
+				<button id="buttonIruzkinak" class="botoiZuria">Iruzkinak ikusi</button>
 			</div>
 		</div>
 	</div>

@@ -14,7 +14,7 @@
         include 'Navbar.php';
     ?>
     <script>
-        $("#home").attr('href', 'index.php')
+        $("#homelink").attr("onclick", "window.location='index.php'")
     </script>
     <div id="login">
         <div class="container">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="row h-100">
                                 <div class="col-auto">
-                                    <input type="button" id="submit" name="submit" class="botoiUrdin" value="Log In">
+                                    <input type="button" id="submit" name="submit" class="botoiZuria" value="Log In">
                                 </div>
                                 <div class="col align-self-center">
                                     <p class="p-1" id="loginalert"></p>

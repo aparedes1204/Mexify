@@ -31,41 +31,50 @@
         curl_setopt($curl, CURLOPT_HEADER, FALSE);
         $response = curl_exec($curl);
         $lyricsarray = json_decode($response);
-        $lyrics=preg_replace("/\n\n+/i", "\n\n", $lyricsarray->lyrics);
-        $lyrics=str_replace("\n", "<br>", $lyrics);
-                echo "
-                    <div class= 'container-fluid' style='background-image: linear-gradient(#008CBA, #02a9e0); '>
-                        <div class='row'>
-                            <div class='col-md-4 col-lg-4 text-center'><img src='".$songinfo->cover."' id='abesti_irudia' class='img-fluid' style='width: 70%' alt='Diskoaren azala' title=' Diskoaren azala ' border='0' /></div>
-                            <div class='col-md-8 col-lg-8'>
-                                <h2 class='kategoria'>".$songinfo->title."</h2><h2 id='titulua'></h2>
-                                <br/>
-                                <h3 class='kategoria'>".$songinfo->artist."</h4><h4  id='artista'></h3>
+        if($lyricsarray->error){
+            $lyrics = "Ez dago letrarik";
+        } else {
+            $lyrics=preg_replace("/\n\n+/i", "\n\n", $lyricsarray->lyrics);
+            $lyrics=str_replace("\n", "<br>", $lyrics);
+        }
+echo "
+                        <div class='card shadow-sm p-4 mb-2 bg-white'>
+                            <div class='row no-gutters'>
+                                <div class='col-auto' id='playcontainer'>
+                                    <img class='card-img' id='imagedetails' src='".$song->cover."' alt='Suresh Dasari Card'>
+                                </div>
+                                <div class='col'>
+                                    <div class='card-body'>
+                                        <h3 class='card-title'>".$song->title."</h3>
+                                        <h5 class='card-text'>".$song->artist."</h5>
+                                        <div class='card-text mt-3'>
+                                            <h6 class='card-text'>Abestiari buruz</h6>
+                                            <p>".$song->description."</p>
+                                        </div>
+                                    </div>
+                                </div>    
                             </div>
                         </div>
-                    </div>
-                    <div class='row text-white'>
-                        <div class='col'>
-                            <h4 class='mt-3'>Letra</h4>
-                            <p id='lyrics'>".$lyrics."</p>
-                        </div>
-                        <div class='col mt-3'>
+                        <div class='row text-white'>
+                            <div class='col'>
+                                <h4 class='mt-3'>Letra</h4>
+                                <p id='lyrics'>".$lyrics."</p>
+                            </div>
+                            <div class='col mt-3'>";
 
-                    
-            ";
             if(isset($_SESSION['email'])){
                 echo "
                     <form id='reviewForm' >
                         <h4>Iruzkin berria gehitu</h4>
-                        <textarea name='review' id='review' cols='70' rows='7'></textarea>
+                        <textarea name='review' id='review' cols='100' rows='7'></textarea>
                         <p><input type='button' class='botoiBeltza float-right mt-2' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'></p>
                     </form>
                 ";
             }
         if(!isset($comments)){
             echo"<div id='songcomments'>
-                <p> Ez dago iruzkinik abesti honetarako</p>
-            </div>";
+                    <p> Ez dago iruzkinik abesti honetarako</p>
+                </div>";
         } else {
             if(isset($_SESSION['email'])){
                 echo "<div class='col mt-5'>
@@ -86,8 +95,6 @@
                
         }
         echo"
-        </div>
-                </div>
             </div>
         </div>";
 

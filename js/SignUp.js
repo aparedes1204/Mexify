@@ -3,6 +3,7 @@ $(document).on("click", "#submit",function() {
     var data = {}
     data['email'] = $("#email").val()
     data['password'] = $("#password").val()
+    data['name'] = $("#name").val()
 
     $.ajax({
         url: '../php/SignUpValidation.php',

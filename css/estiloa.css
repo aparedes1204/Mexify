@@ -1,6 +1,41 @@
+/*Navbarrean webguneko logo jarri*/
+#homeicon{
+	width: 50px;
+    height: 50px;
+    cursor: pointer;
+	background: url('../images/logo.svg');
+    background-size: cover;
+}
+/*Logoan hover egiterakoan webgunearen izen aezkerretik agertzea transizioarekin*/
+	#logoname {
+		opacity: 0;
+		transition: opacity 0s ease-in 600ms, opacity 600ms;
+		position: relative;
+	}
 
+	#logoname:after{
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		transition: width 600ms;
+	}
 
-.botoiUrdin{
+	#homeicon:hover #logoname {
+		opacity: 1;
+		transition: opacity 0s ease-in 600ms, opacity 600ms;
+	}
+
+	#homeicon:hover #logoname:after{
+		width: 0;   
+	}
+
+/*Webguneko botoi zuriaren estiloa*/
+.botoiZuria{
 	text-decoration: none;
   	background-color: white;
   	color: black;
@@ -10,11 +45,13 @@
 	padding-bottom: 3px;
 }
 
-.botoiUrdin:hover {
+/*Botoi zurian hover egiterakoan honen kolorea aldatu*/
+.botoiZuria:hover {
 	background-color: #343a40;
   	color: white;
 }
 
+/*Webguneko botoi beltzaren estiloa, botoi zuriaren aurkakoa*/
 .botoiBeltza{
 	text-decoration: none;
   	background-color: #343a40;
@@ -25,10 +62,13 @@
 	padding-bottom: 3px;
 }
 
+/*Botoibeltzean hover egiterakoan honen kolorea aldatu*/
 .botoiBeltza:hover {
 	background-color: white;
   	color: #343a40;
 }
+
+/*Abesti bakoitzaren argazkia*/
 #image{
 	width:  100px;
     height: 100px;
@@ -37,6 +77,8 @@
   	transition: .25s ease;
   	backface-visibility: hidden;
 }
+
+/*Abesti baten argazkiaren gainean hover egiterakoan agertu behar den irudia prestatu*/
 .play {
 	transform: translate(50%, -150%);
 	-ms-transform: translate(50%, -150%);
@@ -46,15 +88,18 @@
 	transition: .25s ease;
 	opacity: 0;
 }
+
+/*Abestiaren irudiaren gainean hover egiterakoan honen opakutasuna jaitsi*/
 #playcontainer:hover #image {
 	opacity: 0.3;	
 }
 
+/*Abestiaren irudiaren gainean hover egiterakoan agertu behar den play irudia erakutsi*/
 #playcontainer:hover .play {
 	opacity: 1;
 }
 
-
+/*Abestiaren progresio barra (itzala eta borobiltasuna)*/
 #song-played-progress {
 	border-radius: 25px; 
 	width: 500px;
@@ -62,54 +107,62 @@
 	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
 }
 
+/*Abestiaren progresio barran falta denaren kolorea eta tamaina (chromium)*/
 #song-played-progress::-webkit-progress-bar {
 	background-color: #717980;
 	border-radius: 7px;
 }
 
+/*Abestiaren progresio barran erreproduzitu den kantitatearen kolorea eta tamaina (chromium)*/
 #song-played-progress::-webkit-progress-value {
 	background-color: #343a40;
 	border-radius: 7px;
 }
 
+/*Abestiaren progresio barran falta denaren kolorea eta tamaina (mozilla)*/
 #song-played-progress::-moz-progress-bar {
 	background-color: #717980;
 	border-radius: 7px;
 }
 
+/*Abestiaren progresio barran erreproduzitu den kantitatearen kolorea eta tamaina (mozilla)*/
 #song-played-progress::-moz-progress-value {
 	background-color: #343a40;
 	border-radius: 7px;
 }
 
-
-
+/*Play/pause botoiaren tamaina*/
 .amplitude-play-pause {
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
 
+/*Play irudia*/
 .amplitude-play-pause.amplitude-paused {
-    background: url('play.svg');
+    background: url('../images/play.svg');
     background-size: cover;
 }
 
+/*Pause irudia*/
 .amplitude-play-pause.amplitude-playing {
-    background: url('pause.svg');
+    background: url('../images/pause.svg');
     background-size: cover;
 }
 
+/*Muteatu gabea irudia*/
 .amplitude-mute.amplitude-not-muted {
-    background: url('volume.svg');
+    background: url('../images/volume.svg');
     background-size: cover;
 }
 
+/*Muteatuta irudia*/
 .amplitude-mute.amplitude-muted {
-    background: url('muted.svg');
+    background: url('../images/muted.svg');
     background-size: cover;
 }
 
+/*Muteatuta/ez muteatuta irudiaren tamaina*/
 .amplitude-mute{
 	cursor: pointer;
     width: 29px;
@@ -117,6 +170,7 @@
     float: left; 
 }
 
+/*Erreproduzitzailean abestiaren irudiaren tamaina*/
 .album-art{
 	border-radius: 5px;
 	float:left;
@@ -125,17 +179,7 @@
 	object-fit: cover;
 }
 
-/* .amplitude-volume-slider{
-	width: 200px;
-	background-color: #6c757d;
-}
-
-.amplitude-volume-slider::-webkit-slider-thumb{
-    -webkit-appearance: none;
-	background-color: #343a40;
-	opacity: 0;
-} */
-
+/*Bolumena aukeratzeko barraren estiloa*/
 .amplitude-volume-slider {
 	width: 200px;
 	height: 7px;
@@ -145,6 +189,8 @@
 	border-radius: 7px;
 	overflow: hidden;
 }
+
+/*Bolumena aukeratzeko barrako sliderraren estiloa (chromium)*/
 .amplitude-volume-slider::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	width: 15px;
@@ -154,7 +200,7 @@
 	box-shadow: -200px 0 0 200px #343a40;
 }
 
-
+/*Bolumena aukeratzeko barrako sliderraren estiloa (mozilla)*/
 .amplitude-volume-slider::-moz-range-thumb {
 	-webkit-appearance: none;
 	width: 15px;
@@ -164,6 +210,7 @@
 	box-shadow: -200px 0 0 200px #343a40;
 }
 
+/*Erreproduzitzailearen tamaina eta hau erakusteko trantsizioa*/
 #player{
     width: 100%;
     height: 0px;
@@ -174,6 +221,7 @@
    -webkit-transition:all 0.25s ease-in-out;
 }
 
+/*Erreproduzitzailearen tamaina erkustean eta trantsizioa*/
 #player.show
 {
     height: 154px;
@@ -184,14 +232,23 @@
    -webkit-transition:all 0.25s ease-in-out;
 }
 
+/*Log in formularioaren estiloa*/
 #login-box {
 	height: 315px;
 	border-radius: 5px;
 	background-color: white;
 }
 
+/*Sign up formularioaren estiloa*/
 #signup-box {
-	height: 400px;
+	height: 431px;
 	border-radius: 5px;
 	background-color: white;
+}
+
+/*Abesti baten informazio gehiago ikusterakoan abestiaren irudiaren tamaina*/
+#imagedetails{
+	width:  400px;
+    height: 400px;
+	object-fit: cover;
 }
