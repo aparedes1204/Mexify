@@ -31,4 +31,14 @@
         <album></album>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
     </song>
+       <song id="4">
+        <cover>../cover/laughingontheoutside.jpg</cover>
+        <file>../music/Laughing on the Outside.mp3</file>
+        <title>Laughing on the Outside</title>
+        <resttitle>Laughing on the Outside</resttitle>
+        <artist>Bernadette Carroll</artist>
+        <restartist>Bernadette Carroll</restartist>
+        <album>The Party Girl</album>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum arcu eu sapien vestibulum placerat. Duis interdum placerat semper. Donec facilisis, mauris ut porttitor interdum, dui ex lobortis tellus, ut gravida metus odio id mauris. In sit amet quam dignissim libero eleifend finibus ut eu ligula. Suspendisse convallis quam metus, nec finibus orci dictum sit amet. Cras ut dui eget dolor porta pellentesque ut tristique leo. Integer at tincidunt metus.</description>
+    </song>
 </songs>

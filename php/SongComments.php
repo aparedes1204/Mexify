@@ -27,7 +27,6 @@ Aukeratutako kantaren informazioa eta iruzkinak bueltatzen ditu, bai eta iruzkin
         $artisturl=str_replace(" ", "%20", $songinfo->restartist);
         $songurl=str_replace(" ", "%20", $songinfo->resttitle);
         $url = "https://api.lyrics.ovh/v1/$artisturl/$songurl";
-
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($curl, CURLOPT_HEADER, FALSE);
@@ -73,17 +72,19 @@ echo "
                     </form>
                 ";
             }
-        if(!isset($comments)){
+        if(!isset($comments->comment)){
             echo"<div id='songcomments'>
                     <p> Ez dago iruzkinik abesti honetarako</p>
                 </div>";
         } else {
             if(isset($_SESSION['email'])){
                 echo "<div class='col mt-5'>
-                        <h4>Iruzkinak</h4>";
+                        <h4>Iruzkinak</h4>
+                        <hr class='bg-white'/>";
             } else {
                 echo "<div class='col'>
-                        <h4>Iruzkinak</h4>";
+                        <h4>Iruzkinak</h4>
+                        <hr class='bg-white'/>";
             }
             foreach($comments->children() as $comment){
                 $date = explode("T",$comment->date)[0];
