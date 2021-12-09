@@ -1,6 +1,6 @@
 <div id="navbar">
   <nav class="navbar fixed-top navbar-light shadow-sm p-3 bg-white">
-    <a class="navbar-brand" href="#">Mexify</a>
+    <a class="navbar-brand" id="home" href="#">Mexify</a>
     <span class="navbar-text">
       <?php
         if(!isset($_SESSION)){
