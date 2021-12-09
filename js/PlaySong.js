@@ -14,7 +14,8 @@ function playSong(id){
                     break
                 }
             }
-            $("#player").css("visibility", "visible")
+            //$("#player").css("height", "154px")
+            $('#player').addClass("show");
             Amplitude.playNow(songobj);
         }, 
         error: function(data){

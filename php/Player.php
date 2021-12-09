@@ -3,8 +3,8 @@
 
 <footer>
 
-<div class="fixed-bottom " id="player" style="visibility: hidden;">
-  <div class="card shadow-lg p-3 bg-white" style="width: 100%;">
+<div class="fixed-bottom" id="player">
+  <div class="card shadow-lg p-3 bg-white">
     <div class="row no-gutters">
       <div class="col">
         <div class="row no-gutters">
@@ -19,7 +19,7 @@
       </div>
       <div class="col align-self-center">
         <div class="row">
-          <div class="col align-self-center d-flex justify-content-center">
+          <div class="col align-self-center d-flex justify-content-center" id="progress">
             <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds mr-3"></span>
             <progress class="amplitude-song-played-progress mt-2" id="song-played-progress"></progress>
             <span class="amplitude-duration-minutes ml-3"></span>:<span class="amplitude-duration-seconds"></span>
@@ -43,14 +43,16 @@
 </footer>
 
 <script>
-  Amplitude.init();
 
-  document.getElementById('song-played-progress').addEventListener('click', function (e) {
+  $('#song-played-progress').on('click', function (e) {
     var offset = this.getBoundingClientRect();
     var x = e.pageX - offset.left;
 
     Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat(this.offsetWidth)) * 100);
   });
+  
+  Amplitude.init();
+
 
 </script>
 

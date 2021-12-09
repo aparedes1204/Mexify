@@ -57,7 +57,7 @@
                 echo "
                     <form id='reviewForm' >
                         <h4>Iruzkin berria gehitu</h4>
-                        <textarea name='review' id='review' cols='150' rows='7'></textarea>
+                        <textarea name='review' id='review' cols='70' rows='7'></textarea>
                         <p><input type='button' class='botoiBeltza float-right mt-2' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'></p>
                     </form>
                 ";
