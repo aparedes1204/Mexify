@@ -55,10 +55,10 @@
             ";
             if(isset($_SESSION['email'])){
                 echo "
-                    <form id='reviewForm'>
+                    <form id='reviewForm' >
                         <h4>Iruzkin berria gehitu</h4>
                         <textarea name='review' id='review' cols='150' rows='7'></textarea>
-                        <p><input type='button' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'></p>
+                        <p><input type='button' class='botoiBeltza float-right mt-2' id='submitReview' value='Gehitu iruzkina' onclick='sendReview(".$id.")'></p>
                     </form>
                 ";
             }
@@ -67,17 +67,23 @@
                 <p> Ez dago iruzkinik abesti honetarako</p>
             </div>";
         } else {
-            echo "<div class='col mt-3'>
-                    <h4>Iruzkinak</h4>";
-                foreach($comments->children() as $comment){
-                    $date = explode("T",$comment->date)[0];
-                    $author = $comment->author;
-                    $review = $comment->review;
-                    echo '<h5>'.$author.'</h5>';
-                    echo '<h6>'.$date.'</h6>';
-                    echo '<p>'.$review.'</p>';
-                    echo "<hr class='bg-white'/>";
-                }
+            if(isset($_SESSION['email'])){
+                echo "<div class='col mt-5'>
+                        <h4>Iruzkinak</h4>";
+            } else {
+                echo "<div class='col'>
+                        <h4>Iruzkinak</h4>";
+            }
+            foreach($comments->children() as $comment){
+                $date = explode("T",$comment->date)[0];
+                $author = $comment->author;
+                $review = $comment->review;
+                echo '<h5>'.$author.'</h5>';
+                echo '<h6>'.$date.'</h6>';
+                echo '<p>'.$review.'</p>';
+                echo "<hr class='bg-white'/>";
+            }
+               
         }
         echo"
         </div>

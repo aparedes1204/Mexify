@@ -14,6 +14,21 @@
 	background-color: #343a40;
   	color: white;
 }
+
+.botoiBeltza{
+	text-decoration: none;
+  	background-color: #343a40;
+  	color: white;
+  	border: 2px solid white;
+	border-radius: 25px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.botoiBeltza:hover {
+	background-color: white;
+  	color: #343a40;
+}
 #image{
 	width:  100px;
     height: 100px;
